@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.conteiner {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    max-width: 620px;
+    width: 100%;
+    height: 260px;
+    border-radius: 20px;
+}
+
+.conteinerImg {
+   position: absolute;
+   display: flex;
+}
+
+.ImgSlade {
+    width: 620px;
+    height: 260px;  
+    overflow: hidden;
+    border-radius: 19px;
+    display: flex;
+    
+}
+
+.activeImg {
+    display: none;  
+}
+
+
+.ConteinerPoints {
+    display: flex;
+    gap: 8px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: end;
+    
+}
+
+.points {
+    display: inline-flex;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+    bottom: 8px;
+    position: relative;
+    background-color: white;
+    
+}
+
+.arrow {
+    display: flex;
+    position: absolute;
+    left: 620px;
+    top: 130px;
+    align-items: center;
+    
+} 
+
+ .leftArrow,
+.rightArrow {
+    font-size: 2em;
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    top: 110px;
+    
+}
+
+.leftArrow {
+    display: flex;
+    position: absolute;
+    border: 1px solid black;
+    margin-left: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 50%;
+    background-color: white;
+    
+}
+
+.rightArrow {
+    display: flex;
+    position: absolute;
+    border: 1px solid black;
+    margin-left: 570px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
