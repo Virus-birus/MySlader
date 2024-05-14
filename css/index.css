@@ -56,6 +56,10 @@
     
 }
 
+.colorPoint {
+    background-color: rgb(189, 35, 255);
+}
+
 .arrow {
     display: flex;
     position: absolute;
