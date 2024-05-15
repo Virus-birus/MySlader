@@ -8,50 +8,62 @@ points[0].classList.add('colorPoint')
 
 let counter = 0
 
-for(let a = 0; a < points.length; a++) {
-    points[a].addEventListener('click', () => {
-        for(let k = 0; k < ImgSlade.length; k++) {
-         ImgSlade[k].classList.add('activeImg') 
-         points[k].classList.remove('colorPoint')
-      }
+function point() {
+  for(let a = 0; a < points.length; a++) {
+      points[a].addEventListener('click', () => {
+          for(let k = 0; k < ImgSlade.length; k++) {
+          ImgSlade[k].classList.add('activeImg') 
+          points[k].classList.remove('colorPoint')
+        }
+            
+      counter = a
+      points[counter].classList.add('colorPoint')
+      ImgSlade[counter].classList.remove('activeImg')
           
-    counter = a
-    points[counter].classList.add('colorPoint')
-    ImgSlade[counter].classList.remove('activeImg')
-        
-  })
-   
+    })
+    
+  }
 }
 
-leftArrow.addEventListener('click', () => {
-    for(let k = 0; k < ImgSlade.length; k++) {
-      ImgSlade[k].classList.add('activeImg') 
-      points[k].classList.remove('colorPoint')
-    }
- 
-    counter--
+point()
 
-    if(counter < 0) {
-    counter = ImgSlade.length-1
-  }
+function LeftArrow() {
+  leftArrow.addEventListener('click', () => {
+      for(let k = 0; k < ImgSlade.length; k++) {
+        ImgSlade[k].classList.add('activeImg') 
+        points[k].classList.remove('colorPoint')
+      }
+  
+      counter--
 
-  ImgSlade[counter].classList.remove('activeImg')
-  points[counter].classList.add('colorPoint')
-})
-
-rightArrow.addEventListener('click', () => {
-    for(let k = 0; k < ImgSlade.length; k++) {
-      ImgSlade[k].classList.add('activeImg') 
-      points[k].classList.remove('colorPoint')
+      if(counter < 0) {
+      counter = ImgSlade.length-1
     }
 
-    counter++
+    ImgSlade[counter].classList.remove('activeImg')
+    points[counter].classList.add('colorPoint')
+  })
+}
 
-    if(counter >= ImgSlade.length) {
-    counter = 0
-  }
+LeftArrow()
 
-  ImgSlade[counter].classList.remove('activeImg')
-  points[counter].classList.add('colorPoint')
-})
+function RightArrow() {
+  rightArrow.addEventListener('click', () => {
+      for(let k = 0; k < ImgSlade.length; k++) {
+        ImgSlade[k].classList.add('activeImg') 
+        points[k].classList.remove('colorPoint')
+      }
+
+      counter++
+
+      if(counter >= ImgSlade.length) {
+      counter = 0
+    }
+
+    ImgSlade[counter].classList.remove('activeImg')
+    points[counter].classList.add('colorPoint')
+  })
+}
+
+RightArrow()
 
