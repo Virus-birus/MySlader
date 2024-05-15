@@ -6,21 +6,52 @@ const rightArrow = document.querySelector('.rightArrow')
 ImgSlade[0].classList.remove('activeImg')
 points[0].classList.add('colorPoint')
 
-function poi() {
-  for(let a = 0; a < points.length; a++) {
+let counter = 0
+
+for(let a = 0; a < points.length; a++) {
     points[a].addEventListener('click', () => {
         for(let k = 0; k < ImgSlade.length; k++) {
-            ImgSlade[k].classList.add('activeImg') 
-            points[k].classList.remove('colorPoint')
-        }
+         ImgSlade[k].classList.add('activeImg') 
+         points[k].classList.remove('colorPoint')
+      }
           
-        let count = a
-        points[count].classList.add('colorPoint')
-        ImgSlade[count].classList.remove('activeImg')
+    counter = a
+    points[counter].classList.add('colorPoint')
+    ImgSlade[counter].classList.remove('activeImg')
         
-    })
+  })
    
-  }
 }
 
-poi()   
+leftArrow.addEventListener('click', () => {
+    for(let k = 0; k < ImgSlade.length; k++) {
+      ImgSlade[k].classList.add('activeImg') 
+      points[k].classList.remove('colorPoint')
+    }
+ 
+    counter--
+
+    if(counter < 0) {
+    counter = ImgSlade.length-1
+  }
+
+  ImgSlade[counter].classList.remove('activeImg')
+  points[counter].classList.add('colorPoint')
+})
+
+rightArrow.addEventListener('click', () => {
+    for(let k = 0; k < ImgSlade.length; k++) {
+      ImgSlade[k].classList.add('activeImg') 
+      points[k].classList.remove('colorPoint')
+    }
+
+    counter++
+
+    if(counter >= ImgSlade.length) {
+    counter = 0
+  }
+
+  ImgSlade[counter].classList.remove('activeImg')
+  points[counter].classList.add('colorPoint')
+})
+
