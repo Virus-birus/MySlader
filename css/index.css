@@ -3,25 +3,29 @@
     padding: 0;
 }
 
+
 .conteiner {
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    transform: translateY(50%);
     border: 1px solid black;
-    max-width: 620px;
+    max-width: 820px;
     width: 100%;
-    height: 260px;
+    height: 460px;
     border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 25px 20px -20px;
 }
 
 .conteinerImg {
    position: absolute;
    display: flex;
+   backdrop-filter: 0.1;
 }
 
 .ImgSlade {
-    width: 620px;
-    height: 260px;  
+    width: 820px;
+    height: 460px;  
     overflow: hidden;
     border-radius: 19px;
     display: flex;
@@ -75,29 +79,36 @@
     cursor: pointer;
     display: flex;
     position: absolute;
-    top: 110px;
+    top: 200px;
     
 }
 
 .leftArrow {
     display: flex;
     position: absolute;
-    border: 1px solid black;
     margin-left: 10px;
     padding-left: 5px;
     padding-right: 5px;
-    border-radius: 50%;
+    border-radius: 50%;  
     background-color: white;
-    
 }
 
 .rightArrow {
     display: flex;
     position: absolute;
-    border: 1px solid black;
-    margin-left: 570px;
+    margin-left: 770px;
     padding-left: 5px;
     padding-right: 5px;
-    border-radius: 50%;
+    border-radius: 50%;  
     background-color: white;
+}
+
+
+
+.rightArrow:hover {
+ opacity: 0.6;
+}
+
+.leftArrow:hover {
+  opacity: 0.6;
 }
